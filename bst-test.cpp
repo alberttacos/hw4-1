@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
     for(BinarySearchTree<char,int>::iterator it = bt.begin(); it != bt.end(); ++it) {
         cout << it->first << " " << it->second << endl;
     }
+		bt.print();
     if(bt.find('b') != bt.end()) {
         cout << "Found b" << endl;
     }
@@ -25,8 +26,9 @@ int main(int argc, char *argv[])
     }
     cout << "Erasing b" << endl;
     bt.remove('b');
+		
 
-    // AVL Tree Tests
+    //AVL Tree Tests
     AVLTree<char,int> at;
     at.insert(std::make_pair('a',1));
     at.insert(std::make_pair('b',2));
